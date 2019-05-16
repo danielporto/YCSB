@@ -1,6 +1,9 @@
 Yahoo! Cloud System Benchmark (YCSB)
 ====================================
 
+UPDATE: This version is the one used by BFT-smart library https://github.com/bft-smart/library
+and was updated to make the client output a report in json format
+
 Links
 -----
 http://wiki.github.com/brianfrankcooper/YCSB/

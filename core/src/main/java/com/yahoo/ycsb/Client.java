@@ -438,7 +438,7 @@ public class Client
 		int threadcount=1;
 		int target=0;
 		boolean status=false;
-		String label="";
+		String label="ycsbstatus:";
 
 		//parse arguments
 		int argindex=0;
