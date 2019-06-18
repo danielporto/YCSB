@@ -43,7 +43,7 @@ class StatusThread extends Thread
 	/**
 	 * The interval for reporting status.
 	 */
-	public static final long sleeptime=10000;
+	public static final long sleeptime=1000;
 
 	public StatusThread(Vector<Thread> threads, String label, boolean standardstatus)
 	{
@@ -96,24 +96,13 @@ class StatusThread extends Thread
 			
 			if (totalops==0)
 			{
-				System.err.println(_label+" "+(interval/1000)+" sec: "+totalops+" operations; "+Measurements.getMeasurements().getSummary());
+				System.err.println(_label+" "+en+" "+(interval/1000)+" sec: "+totalops+" operations; "+Measurements.getMeasurements().getSummary());
 			}
 			else
 			{
-				System.err.println(_label+" "+(interval/1000)+" sec: "+totalops+" operations; "+d.format(curthroughput)+" current ops/sec; "+Measurements.getMeasurements().getSummary());
+				System.err.println(_label+" "+en+" "+(interval/1000)+" sec: "+totalops+" operations; "+d.format(curthroughput)+" current ops/sec; "+Measurements.getMeasurements().getSummary());
 			}
 
-			if (_standardstatus)
-			{
-			if (totalops==0)
-			{
-				System.out.println(_label+" "+(interval/1000)+" sec: "+totalops+" operations; "+Measurements.getMeasurements().getSummary());
-			}
-			else
-			{
-				System.out.println(_label+" "+(interval/1000)+" sec: "+totalops+" operations; "+d.format(curthroughput)+" current ops/sec; "+Measurements.getMeasurements().getSummary());
-			}
-			}
 
 			try
 			{
